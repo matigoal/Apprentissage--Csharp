@@ -1,16 +1,16 @@
 using System;
 
  
-namespace TriparBubble
+namespace TriBubble
 {
-    public  class Program
+  public class Program
     {
-      public  static void Main(string[] args)
+       public static void Main(string[] args)
         {
-            const int MaxTableau = 8;
+            const int MaxTableau = 13;//définition taille du tableau
             int K,L,I,J;
-            int[] Tableau = { 15, 10, 23, 2, 8, 9, 14, 16 };//Tableau désordonnées
-            Console.Write("BEFORE:");// écriture dans la console
+            int[] Tableau = { 9, 12, 26, 6, 86, 34, 14, 16, 23, 43, 56, 78, 99};// Valeur initial tableau(désordonnées)
+            Console.Write("Before:");
             for(K = 0; K < MaxTableau; K++) Console.Write(Tableau[K] + ", ");
  
             for(I = MaxTableau - 2;I >= 0; I--) {
@@ -23,7 +23,7 @@ namespace TriparBubble
                 }
             }
             Console.WriteLine();
-            Console.Write("AFTER:");
+            Console.Write("After:");
             for(L = 0; L < MaxTableau; L++) {
                 Console.Write(", " + Tableau[L]);
             }
